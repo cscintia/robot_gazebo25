@@ -29,7 +29,7 @@
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
-IGNITION_ADD_PLUGIN(
+GZ_ADD_PLUGIN(
     robotverseny_gazebo::FullSystem,
     gz::sim::System,
     robotverseny_gazebo::FullSystem::ISystemConfigure,
@@ -46,7 +46,7 @@ void FullSystem::Configure(const gz::sim::Entity &_entity,
                 gz::sim::EntityComponentManager &_ecm,
                 gz::sim::EventManager &_eventManager)
 {
-  igndbg << "robotverseny_gazebo::FullSystem::Configure on entity: " << _entity << std::endl;
+  gzdbg << "robotverseny_gazebo::FullSystem::Configure on entity: " << _entity << std::endl;
 }
 
 void FullSystem::PreUpdate(const gz::sim::UpdateInfo &_info,
@@ -54,7 +54,7 @@ void FullSystem::PreUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "robotverseny_gazebo::FullSystem::PreUpdate" << std::endl;
+    gzdbg << "robotverseny_gazebo::FullSystem::PreUpdate" << std::endl;
   }
 }
 
@@ -63,7 +63,7 @@ void FullSystem::Update(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "robotverseny_gazebo::FullSystem::Update" << std::endl;
+    gzdbg << "robotverseny_gazebo::FullSystem::Update" << std::endl;
   }
 }
 
@@ -72,7 +72,7 @@ void FullSystem::PostUpdate(const gz::sim::UpdateInfo &_info,
 {
   if (!_info.paused && _info.iterations % 1000 == 0)
   {
-    igndbg << "robotverseny_gazebo::FullSystem::PostUpdate" << std::endl;
+    gzdbg << "robotverseny_gazebo::FullSystem::PostUpdate" << std::endl;
   }
 }
 

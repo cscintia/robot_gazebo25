@@ -25,7 +25,7 @@
 #include <gz/plugin/Register.hh>
 
 // Don't forget to include the plugin's header.
-#include "robotverseny_gazebo/BasicSystem.hh"
+#include <robotverseny_gazebo/BasicSystem.hh>
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
@@ -34,7 +34,7 @@ GZ_ADD_PLUGIN(
     gz::sim::System,
     robotverseny_gazebo::BasicSystem::ISystemPostUpdate)
 
-namespace robotverseny_gazebo 
+namespace robotverseny_gazebo
 {
 
 void BasicSystem::PostUpdate(const gz::sim::UpdateInfo &_info,

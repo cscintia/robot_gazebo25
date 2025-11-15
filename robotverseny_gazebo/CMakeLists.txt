@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 
 # Following directive defines the project name.
 project(robotverseny_gazebo)
@@ -15,19 +15,8 @@ find_package(gz-plugin2 REQUIRED COMPONENTS register)
 set(GZ_PLUGIN_VER ${gz-plugin2_VERSION_MAJOR})
 find_package(gz-common5 REQUIRED COMPONENTS profiler)
 set(GZ_COMMON_VER ${gz-common5_VERSION_MAJOR})
-
-# Harmonic
-if("$ENV{GZ_VERSION}" STREQUAL "harmonic")
-  find_package(gz-sim8 REQUIRED)
-  set(GZ_SIM_VER ${gz-sim8_VERSION_MAJOR})
-  message(STATUS "Compiling against Gazebo Harmonic")
-# Default to Garden
-else()
-  find_package(gz-sim8 REQUIRED)
-  set(GZ_SIM_VER ${gz-sim8_VERSION_MAJOR})
-  message(STATUS "Compiling against Gazebo Garden")
-endif()
-
+find_package(gz-sim8 REQUIRED)
+set(GZ_SIM_VER ${gz-sim8_VERSION_MAJOR})
 
 # Following 'add_library' directive defines a library target named 'BasicSystem'.
 # The 'SHARED' keyword indicates that a shared library should be compiled, and
@@ -72,7 +61,7 @@ target_link_libraries(FullSystem PRIVATE
 
 # Following 'install' directive ensures that the compiled libraries
 # of the 'BasicSystem' and 'FullSystem' targets will be copied
-# to the subfolder 'lib/ros_gz_example_gazebo' of the install directory.
+# to the subfolder 'lib/robotverseny_gazebo' of the install directory.
 install(
   TARGETS BasicSystem FullSystem
   DESTINATION lib/${PROJECT_NAME}
@@ -80,7 +69,7 @@ install(
 
 
 # Following 'install' directive ensures that the 'worlds' subfolder
-# will be copied to the 'share/ros_gz_example_gazebo/worlds'
+# will be copied to the 'share/robotverseny_gazebo/worlds'
 # subfolder of the installation directory.
 install(
   DIRECTORY worlds/
@@ -96,7 +85,7 @@ endif()
 
 
 # Following hooks are used to ensure that the correct environment variables
-# will be set by exectuting 'source install/setup.bash' after compilation.
+# will be set by exectuting 'sourece install/setup.bash' after compilation.
 # When using this template for your project, change the filenames of the
 # files in the 'hooks' folder, to correspond to your project name.
 ament_environment_hooks("${CMAKE_CURRENT_SOURCE_DIR}/hooks/${PROJECT_NAME}.dsv.in")

@@ -25,7 +25,7 @@
 #include <gz/plugin/Register.hh>
 
 // Don't forget to include the plugin's header.
-#include "robotverseny_gazebo/FullSystem.hh"
+#include <robotverseny_gazebo/FullSystem.hh>
 
 // This is required to register the plugin. Make sure the interfaces match
 // what's in the header.
@@ -38,7 +38,7 @@ GZ_ADD_PLUGIN(
     robotverseny_gazebo::FullSystem::ISystemPostUpdate
 )
 
-namespace robotverseny_gazebo 
+namespace robotverseny_gazebo
 {
 
 void FullSystem::Configure(const gz::sim::Entity &_entity,

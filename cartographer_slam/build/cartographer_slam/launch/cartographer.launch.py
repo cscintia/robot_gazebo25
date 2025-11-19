@@ -1,0 +1,1 @@
+/home/cintia/robotverseny/robot_gazebo25/cartographer_slam/launch/cartographer.launch.py

@@ -1,0 +1,21 @@
+[3.865s] Invoking command in '/home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam': PYTHONPATH=/home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cintia/robotverseny/robot_gazebo25/cartographer_slam/install/cartographer_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam/build --no-deps symlink_data
+[5.302s] running develop
+[6.136s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:363: UserWarning: Unbuilt egg for pytest-repeat [unknown version] (/usr/lib/python3/dist-packages)
+[6.136s]   self.local_index = Environment(self.shadow_path + sys.path)
+[6.284s] running egg_info
+[6.285s] creating cartographer_slam.egg-info
+[6.353s] writing cartographer_slam.egg-info/PKG-INFO
+[6.355s] writing dependency_links to cartographer_slam.egg-info/dependency_links.txt
+[6.357s] writing requirements to cartographer_slam.egg-info/requires.txt
+[6.361s] writing top-level names to cartographer_slam.egg-info/top_level.txt
+[6.367s] writing manifest file 'cartographer_slam.egg-info/SOURCES.txt'
+[6.478s] reading manifest file 'cartographer_slam.egg-info/SOURCES.txt'
+[6.479s] writing manifest file 'cartographer_slam.egg-info/SOURCES.txt'
+[6.573s] running build_ext
+[6.657s] Creating /home/cintia/robotverseny/robot_gazebo25/cartographer_slam/install/cartographer_slam/lib/python3.12/site-packages/cartographer-slam.egg-link (link to .)
+[6.659s] 
+[6.660s] Installed /home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam
+[6.660s] running symlink_data
+[6.666s] symbolically linking /home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam/package.xml -> /home/cintia/robotverseny/robot_gazebo25/cartographer_slam/install/cartographer_slam/share/cartographer_slam
+[6.666s] symbolically linking /home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam/launch/cartographer.launch.py -> /home/cintia/robotverseny/robot_gazebo25/cartographer_slam/install/cartographer_slam/share/cartographer_slam
+[6.807s] Invoked command in '/home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam' returned '0': PYTHONPATH=/home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/cintia/robotverseny/robot_gazebo25/cartographer_slam/install/cartographer_slam/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/cintia/robotverseny/robot_gazebo25/cartographer_slam/build/cartographer_slam/build --no-deps symlink_data

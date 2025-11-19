@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sdf version="1.8">
+<sdf version="1.11">
     <model name='diff_drive'>
       <link name='chassis'>
         <pose>-0.151427 -0 0.175 0 -0 0</pose>
@@ -164,7 +164,7 @@
         <sensor name='gpu_lidar' type='gpu_lidar'>
           <pose>0 0 0 0 0 0</pose>
           <topic>scan</topic>
-          <ignition_frame_id>diff_drive/lidar_link</ignition_frame_id>
+          <gz_frame_id>diff_drive/lidar_link</gz_frame_id>
           <update_rate>10</update_rate>
           <lidar>
             <scan>

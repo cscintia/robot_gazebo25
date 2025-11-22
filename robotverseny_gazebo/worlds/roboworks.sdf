@@ -191,6 +191,7 @@
         filename="gz-sim-odometry-publisher-system"
         name="gz::sim::systems::OdometryPublisher">
         <odom_frame>odom_combined</odom_frame>
+        <odom_publish_frequency>5</odom_publish_frequency>
         <robot_base_frame>base_link</robot_base_frame>
       </plugin>
     </model>

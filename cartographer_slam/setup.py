@@ -18,5 +18,10 @@ setup(
     maintainer_email='BarhamFarraj@icloud.com',
     description='TODO: Package description',
     license='GNU General Public License v3.0',
-    tests_require=['pytest']
+    tests_require=['pytest'],
+    entry_points={
+        'console_scripts': [
+            'reach_goal.py = cartographer_slam.reach_goal:main',
+        ],
+    },
 )

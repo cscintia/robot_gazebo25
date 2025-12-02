@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<sdf version="1.11">
+<sdf version="1.6">
     <model name='roboworks'>
 
       <link name='base_link'>
@@ -333,13 +333,13 @@
               <near>0.1</near>
               <far>100</far>
             </clip>
+            <depth_camera>
+              <clip>
+                <near>0.1</near>
+                <far>10</far>
+              </clip>
+            </depth_camera>
           </camera>
-          <depth_camera>
-            <clip>
-              <near>0.1</near>
-              <far>10</far>
-            </clip>
-          </depth_camera>
         </sensor>
       </link>
 
@@ -408,19 +408,13 @@
       <link name='imu_link'>
         <pose>0.25 0 0.094 0 0 0</pose>
         <sensor name="imu_sensor" type="imu">
-          <pose>0 0 0 0 0 0</pose> <!-- Position and orientation of the IMU in the link -->
-            <imu>
-              <topic>/mobile_base/sensors/imu_data</topic> <!-- ROS topic for the IMU data -->
-              <update_rate>100</update_rate> <!-- Frequency of data output in Hz -->
-              <always_on>true</always_on>
-              <visualize>true</visualize> <!-- Set to true if you want to visualize the sensor -->
-              <noise>
-                <type>gaussian</type>
-                <mean>0.0</mean>
-                <stddev>0.01</stddev>
-              </noise>
-            </imu>
-            </sensor>
+          <pose>0 0 0 0 0 0</pose>
+          <topic>/mobile_base/sensors/imu_data</topic> <!-- ROS topic for the IMU data -->
+          <update_rate>100</update_rate> <!-- Frequency of data output in Hz -->
+          <always_on>true</always_on>
+          <visualize>true</visualize> <!-- Set to true if you want to visualize the sensor -->
+          <gz_frame_id>imu_link</gz_frame_id>
+        </sensor>
       </link>
 
        <joint name='imu_joint' type='fixed'>
@@ -546,7 +540,7 @@
       </joint>
 
       <plugin
-        filename="ignition-gazebo-ackermann-steering-system"
+        filename="gz-sim-ackermann-steering-system"
         name="gz::sim::systems::AckermannSteering">
         <left_joint>front_left_wheel_joint</left_joint>
         <left_joint>rear_left_wheel_joint</left_joint>

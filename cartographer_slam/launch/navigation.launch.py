@@ -41,6 +41,7 @@ def generate_launch_description():
                 ),
                 launch_arguments={
                     "use_sim_time": "true",
+                    'use_composition': 'False',
                     "params_file": FindPackageShare("cartographer_slam").find(
                         "cartographer_slam"
                     )

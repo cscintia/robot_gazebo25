@@ -2,10 +2,10 @@ slam_toolbox:
   ros__parameters:
     use_sim_time: true
     map_frame: map
-    odom_frame: odom
+    odom_frame: odom_combined
     base_frame: base_link
     publish_tf: true
-    provide_odom_frame: false
+    provide_odom_frame: true
     use_scan_matching: true
     scan_topic: /scan
     minimum_time_between_mapping: 0.2

@@ -7,26 +7,26 @@ import os
 
 def generate_launch_description():
 
-  localization_params_path = os.path.join(
+  slam_toolbox_params_path = os.path.join(
     get_package_share_directory("slam_toolbox_slam") + '/config/slam_toolbox_params.yaml'
     )
 
   # Path to the Slam Toolbox launch file
-  nav2_localization_launch_path = os.path.join(
+  slam_toolbox_launch_path = os.path.join(
     get_package_share_directory('slam_toolbox'),
     'launch',
     'online_async_launch.py'
     )
 
-  localization_launch = IncludeLaunchDescription(
-    PythonLaunchDescriptionSource(nav2_localization_launch_path),
+  slam_toolbox_launch = IncludeLaunchDescription(
+    PythonLaunchDescriptionSource(slam_toolbox_launch_path),
     launch_arguments={
       'use_sim_time': 'true',
-      'slam_params_file': localization_params_path,
+      'slam_params_file': slam_toolbox_params_path,
       }.items()
       )
 
   launchDescriptionObject = LaunchDescription()
-  launchDescriptionObject.add_action(localization_launch)
+  launchDescriptionObject.add_action(slam_toolbox_launch)
 
   return launchDescriptionObject

@@ -10,7 +10,9 @@ setup(
     packages=find_packages(exclude=['test']),
     data_files=[
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', package_name), glob('launch/*launch.[pxy][yma]*')), 
+        (os.path.join('share', package_name), glob('launch/*launch.[pxy][yma]*')),
+        (os.path.join('share', package_name), glob('config/*.yaml')),
+        (os.path.join('share', package_name), glob('config/*.lua')),         
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -18,10 +20,4 @@ setup(
     maintainer_email='BarhamFarraj@icloud.com',
     description='TODO: Package description',
     license='GNU General Public License v3.0',
-    tests_require=['pytest'],
-    entry_points={
-        'console_scripts': [
-            'reach_goal.py = cartographer_slam.reach_goal:main',
-        ],
-    },
 )
